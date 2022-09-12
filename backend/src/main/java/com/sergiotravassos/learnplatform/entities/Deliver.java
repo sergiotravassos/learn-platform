@@ -29,6 +29,7 @@ public class Deliver implements Serializable{
 	
 	@Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
 	private Instant moment;
+	
 	private DeliverStatus status;
 	private String feedback;
 	private Integer correctCount;
@@ -36,7 +37,7 @@ public class Deliver implements Serializable{
 	@ManyToOne
 	@JoinColumns({
 		@JoinColumn(name = "offer_id"),
-		@JoinColumn(name = "uder_id")
+		@JoinColumn(name = "user_id")
 	})
 	private Enrollment enrollment;
 	
